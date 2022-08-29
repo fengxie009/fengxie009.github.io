@@ -1,3 +1,4 @@
-# 我的学术主页
 
-**My howepage:** http://fengxie009.github.io/
+**My homepage:** http://fengxie009.github.io/
+
+Acknowledgement: I would like to thank Xiuze Zhou for his web framework.
