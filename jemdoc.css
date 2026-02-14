@@ -385,10 +385,9 @@ img {
 
 /* keep nav content aligned with your centered body */
 .topnav .nav-inner {
-  max-width: 960px;     /* 你的 body 是 max-width: 960px */
   width: 100%;
-  margin: 0 auto;
-  padding: 0 50px;      /* 你的 body 左右 padding 是 50px */
+  margin: 0;
+  padding: 0 5vw;        /* 和 body 一致的左右留白 */
   display: flex;
   gap: 18px;
   align-items: center;
