@@ -415,3 +415,16 @@ body {
 html {
   scroll-padding-top: 80px;
 }
+
+/* ===== Make page full-width ===== */
+body {
+  max-width: none !important;     /* 取消 960px 限制 */
+  width: 100% !important;
+  margin: 0 !important;           /* 取消 auto 居中和上下 margin */
+  padding-left: 5vw !important;   /* 两侧留白：随屏幕变化 */
+  padding-right: 5vw !important;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
