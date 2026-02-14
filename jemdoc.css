@@ -1,436 +1,235 @@
-/* Default css file for jemdoc. */
-
-table#tlayout {
-    border: none;
-    border-collapse: separate;
-    background: white;
-}
-/*
-body {
-    background: white;
-    padding-bottom: 8px;
-    margin: 0;
-}
-*/
-html {
-  background-color: #eeeeee;
-}
-
-body {
-  font-family: Georgia, serif;
-  color: #000;
-  background-color: #ffffff;
-  text-align:left; /* for IE */
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left:  50px;
-  padding-right: 50px;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  max-width: 960px;
-}
-
-#layout-menu {
-    background: #f6f6f6;
-    border: 1px solid #dddddd;
-    padding-top: 0.5em;
-    padding-left: 8px;
-    padding-right: 8px;
-    font-size: 1.0em;
-    width: auto;
-    white-space: nowrap;
-    text-align: left;
-    vertical-align: top;
-}
-
-#layout-menu td {
-    background: #f4f4f4;
-    vertical-align: top;
-}
-
-#layout-content {
-    padding-top: 0.0em;
-    padding-left: 1.0em;
-    padding-right: 1.0em;
-    border: none;
-    background: white;
-    text-align: left;
-    vertical-align: top;
-}
-
-#layout-menu a {
-    line-height: 1.5em;
-    margin-left: 0.5em;
-}
-
-tt {
-    background: #ffffdd;
-}
-
-pre, tt {
-    font-size: 90%;
-    font-family: monaco, monospace;
-}
-
-a, a > tt {
-    color: #224b8d;
-    text-decoration: none;
-}
-
-a:hover {
-    border-bottom: 1px gray dotted;
-}
-
-#layout-menu a.current:link, #layout-menu a.current:visited {
-    color: #022b6d;
-    border-bottom: 1px gray solid;
-}
-#layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
-    color: #527bbd;
-    text-decoration: none;
-}
-#layout-menu a:hover {
-    text-decoration: none;
-}
-
-div.menu-category {
-    border-bottom: 1px solid gray;
-    margin-top: 0.8em;
-    padding-top: 0.2em;
-    padding-bottom: 0.1em;
-    font-weight: bold;
-}
-
-div.menu-item {
-    padding-left: 16px;
-    text-indent: -16px;
-}
-
-div#toptitle {
-    padding-bottom: 0.2em;
-    margin-bottom: 1.5em;
-    /*border-bottom: 3px double gray;*/
-}
-
-/* Reduce space if we begin the page with a title. */
-div#toptitle + h2, div#toptitle + h3 {
-    margin-top: 0em;
-}
-
-div#subtitle {
-    margin-top: 0.0em;
-    margin-bottom: 0.0em;
-    padding-top: 0em;
-    padding-bottom: 0.1em;
-}
-
-em {
-    font-style: italic;
-}
-
-strong {
-    font-weight: bold;
-}
-
-
-h1, h2, h3 {
-    color: #527bbd;
-    margin-top: 0.7em;
-    margin-bottom: 0.5em;
-    padding-bottom: 0.2em;
-    line-height: 1.0;
-    padding-top: 0.5em;
-    border-bottom: 1px solid #aaaaaa;
-}
-
-h1 {
-    font-size: 165%;
-    padding-bottom: 0.3em;
-}
-
-h2 {
-    padding-top: 0.8em;
-    font-size: 125%;
-}
-
-h2 + h3 {
-    padding-top: 0.2em;
-}
-
-h3 {
-    font-size: 110%;
-    border-bottom: none;
-}
-
-p {
-    margin-top: 0.0em;
-    margin-bottom: 0.8em;
-    padding: 0;
-    line-height: 1.3;
-}
-
-pre {
-    padding: 0;
-    margin: 0;
-}
-
-div#footer {
-    font-size: small;
-    border-top: 1px solid #c0c0c0;
-    padding-top: 0.1em;
-    margin-top: 4.0em;
-    color: #c0c0c0;
-}
-
-div#footer a {
-    color: #80a0b0;
-}
-
-div#footer-text {
-    float: left;
-    padding-bottom: 8px;
-}
-
-ul, ol, dl {
-    margin-top: 0.2em;
-    padding-top: 0;
-    margin-bottom: 0.8em;
-}
-
-dt {
-    margin-top: 0.5em;
-    margin-bottom: 0;
-}
-
-dl {
-    margin-left: 20px;
-}
-
-dd {
-    color: #222222;
-}
-
-dd > *:first-child {
-    margin-top: 0;
-}
-
-ul {
-    list-style-position: outside;
-    list-style-type: square;
-}
-
-p + ul, p + ol {
-    margin-top: -0.5em;
-}
-
-li {
-    margin-top:0.9em;
-}
-
-ol {
-    list-style-position: outside;
-    list-style-type: decimal;
-}
-
-li p, dd p {
-    margin-bottom: 0.3em;
-}
-
-
-ol ol {
-    list-style-type: lower-alpha;
-}
-
-ol ol ol {
-    list-style-type: lower-roman;
-}
-
-p + div.codeblock {
-    margin-top: -0.6em;
-}
-
-div.codeblock, div.infoblock {
-    margin-right: 0%;
-    margin-top: 1.2em;
-    margin-bottom: 1.3em;
-}
-
-div.blocktitle {
-    font-weight: bold;
-    color: #cd7b62;
-    margin-top: 1.2em;
-    margin-bottom: 0.1em;
-}
-
-div.blockcontent {
-    border: 1px solid silver;
-    padding: 0.3em 0.5em;
-}
-
-div.infoblock > div.blockcontent {
-    background: #ffffee;
-}
-
-div.blockcontent p + ul, div.blockcontent p + ol {
-    margin-top: 0.4em;
-}
-
-div.infoblock p {
-    margin-bottom: 0em;
-}
-
-div.infoblock li p, div.infoblock dd p {
-    margin-bottom: 0.5em;
-}
-
-div.infoblock p + p {
-    margin-top: 0.8em;
-}
-
-div.codeblock > div.blockcontent {
-    background: #f6f6f6;
-}
-
-span.pycommand {
-    color: #000070;
-}
-
-span.statement {
-    color: #008800;
-}
-span.builtin {
-    color: #000088;
-}
-span.special {
-    color: #990000;
-}
-span.operator {
-    color: #880000;
-}
-span.error {
-    color: #aa0000;
-}
-span.comment, span.comment > *, span.string, span.string > * {
-    color: #606060;
-}
-
-@media print {
-    #layout-menu { display: none; }
-}
-
-#fwtitle {
-    margin: 2px;
-}
-
-#fwtitle #toptitle {
-    padding-left: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-#layout-content h1:first-child, #layout-content h2:first-child, #layout-content h3:first-child {
-    margin-top: -0.7em;
-}
-
-div#toptitle h1, #layout-content div#toptitle h1 {
-    margin-bottom: 0.0em;
-    padding-bottom: 0.1em;
-    padding-top: 0;
-    margin-top: 0.5em;
-    border-bottom: none;
-}
-
-img.eq {
-    padding: 0;
-    padding-left: 0.1em;
-    padding-right: 0.1em;
-    margin: 0;
-}
-
-img.eqwl {
-    padding-left: 2em;
-    padding-top: 0.6em;
-    padding-bottom: 0.2em;
-    margin: 0;
-}
-
-table + table {
-    margin-top: 1em;
-}
-
-tr.heading {
-    font-weight: bold;
-    border-bottom: 2px solid black;
-}
-
-img {
-    border: none;
-}
-
-
-/* ===== Fixed top navigation bar ===== */
-.topnav {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-  height: 56px;
-  background: #ffffff;
-  border-bottom: 1px solid #e6e6e6;
-  display: flex;
-  align-items: center;
-}
-
-/* keep nav content aligned with your centered body */
-.topnav .nav-inner {
-  width: 100%;
-  margin: 0;
-  padding: 0 5vw;        /* 和 body 一致的左右留白 */
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.topnav a {
-  color: #1a1a1a;
-  text-decoration: none;
-  padding: 8px 6px;
-}
-
-.topnav a:hover {
-  text-decoration: underline;
-}
-
-/* IMPORTANT: body is centered and has margin-top already.
-   We add padding-top to create space for fixed nav without breaking centering. */
-body {
-  padding-top: 70px;   /* 原来是 10px，这里把内容整体往下顶 */
-}
-
-/* avoid anchors being hidden behind the fixed bar */
-html {
-  scroll-padding-top: 80px;
-}
-
-/* ===== Make page full-width ===== */
-body {
-  max-width: none !important;     /* 取消 960px 限制 */
-  width: 100% !important;
-  margin: 0 !important;           /* 取消 auto 居中和上下 margin */
-  padding-left: 5vw !important;   /* 两侧留白：随屏幕变化 */
-  padding-right: 5vw !important;
-  padding-bottom: 30px;
-  background-color: #ffffff;
-  box-sizing: border-box;
-}
-/* reserve space for the fixed top nav */
-body { 
-  padding-top: 80px !important; 
-}
-html {
-  scroll-padding-top: 80px;
-}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Feng Xie's home page">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 仍然加载 jemdoc.css；加版本号避免缓存不更新 -->
+  <link rel="stylesheet" href="jemdoc.css?v=20260214" type="text/css">
+  <link rel="shortcut icon" href="BTBU_logo.png">
+  <title>Feng Xie's Homepage</title>
+
+  <!-- 覆盖/增强：全屏自适应 + 顶部固定导航 -->
+  <style>
+    /* ===== Full width page (override jemdoc body width/centering) ===== */
+    html { background-color: #eeeeee; }
+    body{
+      max-width: none !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding-left: 5vw !important;
+      padding-right: 5vw !important;
+      padding-bottom: 30px !important;
+      box-sizing: border-box;
+      background-color: #ffffff;
+    }
+
+    /* ===== Fixed top navigation ===== */
+    .topnav{
+      position: fixed !important;
+      top: 0; left: 0; right: 0;
+      height: 56px;
+      z-index: 99999;
+      background: #ffffff;
+      border-bottom: 1px solid #e6e6e6;
+      display: flex;
+      align-items: center;
+    }
+    .topnav .nav-inner{
+      width: 100%;
+      padding: 0 5vw;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      box-sizing: border-box;
+      font-family: Georgia, serif;
+      font-size: 18px;
+    }
+    .topnav a{
+      color: #1a1a1a;
+      text-decoration: none;
+      padding: 8px 6px;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+
+    /* 给正文腾出空间，避免被固定导航遮挡 */
+    body{ padding-top: 80px !important; }
+    html{ scroll-padding-top: 80px; }
+
+    /* 让 layout-content 不需要再写 margin-top inline */
+    #layout-content{ padding-top: 0 !important; }
+  </style>
+</head>
+
+<body>
+
+  <!-- 顶部固定导航栏（必须放在 layout-content 之外） -->
+  <div class="topnav">
+    <div class="nav-inner">
+      <a href="#home">Home</a>
+      <a href="#bio">Biography</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#students">Students</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
+    </div>
+  </div>
+
+  <div id="layout-content">
+
+    <a id="home"></a>
+
+    <!--<a href="/cn">中文版本</a>-->
+
+    <table>
+      <tbody>
+        <tr>
+          <td width="670">
+            <div id="toptitle">
+              <h1>Feng Xie &nbsp; <img src="fengxie_cn.png" height="38px" style="margin-bottom:-10px" alt=""></h1>
+            </div>
+            <p>
+              <font size="5" face="Times New Roman">Associate Professor</font><br><br>
+              <a href="https://stxy.btbu.edu.cn/szdw/yytjxsz/fjsyytjx/c91fb67076584b08b0d0cfa4a7b65b8f.htm" target="_blank">Department of Applied Statistics</a>
+              &amp;
+              <a href="https://btbu-causality.group/" target="_blank">Causal Inference Group</a><br>
+              Beijing Technology and Business University <br>
+              Beijing, China. 102488.<br><br>
+              Office: Room 209, Shutong Building, Higher Education Garden, Liangxiang,<br>
+              Email: fengxie@btbu.edu.cn
+            </p>
+          </td>
+          <td>
+            <img src="photos/bio_2025.jpg" border="0" width="300" height="350" alt="">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="bio">Biography</h2>
+    <p>
+      I am currently an associate professor in the Department of Applied Statistics at Beijing Technology and Business University.
+      Before joining BTBU, I did postdoctoral research in the Department of Probability and Statistics at Peking University from 2020 to 2022, working with Prof
+      <a href="https://www.math.pku.edu.cn/jsdw/ltx/141130.htm" target="_blank">Zhi Geng</a>
+      and Prof
+      <a href="https://www.math.pku.edu.cn/teachers/heyb/" target="_blank">Yangbo He</a>.
+      I obtained my PhD in the School of Computer Science at Guangdong University of Technology (2017 - 2020), supervised by Prof
+      <a href="https://ruichucai.github.io/" target="_blank">Ruichu Cai</a>
+      and co-supervised by Prof
+      <a href="https://www.andrew.cmu.edu/user/kunz1/index.html" target="_blank">Kun Zhang</a>
+      (Carnegie Mellon University).
+      I got my Master’s degree in the School of Mathematics and Statistics at Guangdong University of Technology (2014 - 2017), supervised by Prof Zhifeng Hao.
+      From 2019 - 2020, I was a visiting Ph.D. student in the Department of Philosophy, Carnegie Mellon University.
+    </p>
+
+    <h2 id="research">Research Interests:</h2>
+    <ul>
+      <li><p>Causal Discovery, especially in latent variable models, causal factor analysis, and causal representation learning.</p></li>
+      <li><p>Instrumental Variable Model, especially in discovering valid IVs from observational data.</p></li>
+    </ul>
+
+    <!--
+    <font size="4"><p align="justify"><span style="color:#ff0000"><b>I'm looking for students. Welcome to contact me if you are interested! </b></span></p></font>
+    <p style="font-size: 16px; text-align: justify; color: #ff0000; font-weight: bold;">
+      I'm looking for students. Welcome to contact me if you are interested!
+    </p>
+    -->
+
+    <h2 id="publications">Publications (* Equal Contribution, # Corresponding author) &nbsp;&nbsp;&nbsp;
+      <a href="https://scholar.google.com/citations?user=stLFCtQAAAAJ" target="_blank">[Google Scholar Link]</a>
+      <small></small>
+    </h2>
+
+    <br><font size="4"><b>Preprints</b></font>
+    <ul>
+      <li>
+        <p>
+          <a href="https://arxiv.org/pdf/2507.17309" target="_blank">Confounded Causal Imitation Learning with Instrumental Variables.</a><br>
+          Yan Zeng, Shenglan Nie, <b>Feng Xie#</b>, Libo Huang, Peng Wu, and Zhi Geng.<br>
+          arXiv:2507.17309, 2025.
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="https://arxiv.org/pdf/2411.12184" target="_blank">Testability of Instrumental Variables in Additive Nonlinear, Non-Constant Effects Models.</a><br>
+          Xichen Guo, Zheng Li, Biwei Huang, Yan Zeng, Zhi Geng, <b>Feng Xie#</b>.<br>
+          arXiv:2411.12184, 2024.
+        </p>
+      </li>
+    </ul>
+
+    <font size="4"><b>Published Papers</b></font>
+    <ul>
+      <!-- 下面内容保持你原来的列表（我不在这里重复全部条目，直接粘贴你现有的 Published Papers 列表即可） -->
+      <!-- ====== 你原来的 Published Papers 全部 <li>...</li> 从这里开始粘贴 ====== -->
+
+      <li>
+        <p>
+          <a href="https://arxiv.org/pdf/2411.16315" target="_blank">Local Learning for Covariate Selection in Nonparametric Causal Effect Estimation with Latent Variables.</a><br>
+          Zheng Li, Xichen Guo, <b>Feng Xie#</b>, Yan Zeng, Hao Zhang#, and Zhi Geng.<br>
+          <i><b>NeurIPS</b></i>, San Diego Convention Center, 2025.
+        </p>
+      </li>
+
+      <!-- ...（此处继续粘贴你原来的其他论文条目）... -->
+
+      <!-- ====== 你原来的 Published Papers 全部 <li>...</li> 到这里结束 ====== -->
+    </ul>
+
+    <h2 id="students">Students</h2>
+    <font size="4"><b>Phd</b></font>
+    <ul>
+      <li><p>Xichen Guo (2025-; Co-supervision with Zhi Geng)</p></li>
+    </ul>
+
+    <font size="4"><b>Master</b></font>
+    <ul>
+      <li><p>Lulu Xiang (2025-)</p></li>
+      <li><p>Xingyu Liu (2025-)</p></li>
+      <li><p>Zhiqiang Lai (2025-; Co-supervision with Yan Zeng)</p></li>
+      <li><p>Weicong Cheng (2025-)</p></li>
+      <li><p>Zeyu Liu (2024-)</p></li>
+      <li><p>Fengtian Zhang (2024-)</p></li>
+      <li><p>Shenglan Nie (2024-; Co-supervision with Yan Zeng)</p></li>
+      <li><p>Fuyan Huang (2024-)</p></li>
+      <li><p>Ze Wang (2024-)</p></li>
+      <li><p>Xichen Guo (2023-2025; -&gt; Phd at Beijing Technology and Business University)</p></li>
+      <li><p>Zhen Yao (2023-2025; -&gt; Phd at Dalian University of Technology)</p></li>
+      <li><p>Zheng Li (2023-2025; -&gt; Research Assistant at SIAT, Chinese Academy of Sciences)</p></li>
+    </ul>
+
+    <font size="4"><b>Undergraduate</b></font>
+    <ul>
+      <li><p>Yuting Zhang (2024-)</p></li>
+      <li><p>Lin Xie (2023-2025; -&gt; Master at Sun Yat-sen University)</p></li>
+    </ul>
+
+    <h2 id="teaching">Teaching</h2>
+    <p>
+      <li>Data Analysis Based on Python (Spring 2025)</li>
+      <li>Statistical Computing (Fall 2025, Spring 2025, Spring 2024)</li>
+      <li>Machine Learning (Fall 2025, Fall 2024, Fall 2023)</li>
+      <li>Applied Stochastic Processes (Fall 2022)</li>
+    </p>
+
+    <h2 id="service">Academic Service <small></small></h2>
+    <li>Area Chair: NeurIPS 2024, 2025; ICML 2025.</li>
+    <li>
+      Conference PC or Reviewer: NeurIPS 2021,2022, 2023; ICML 2022, 2024; ICLR 2023, 2024; AAAI 2025; KDD 2025;
+      AISTATS 2022, 2023, 2024, 2026; UAI 2022, 2024; CLeaR 2022, 2023, 2024.
+    </li>
+    <li>
+      Journal Reviewer: Journal of the American Statistical Association (JASA); Journal of Machine Learning Research (JMLR);
+      IEEE Transactions on NNLS (TNNLS); Transactions on KDD (TKDD); Transactions on MLR (TMLR);
+      IEEE Journal on Selected Areas in Information Theory; Information Science, Science China: Information Sciences and so on.
+    </li>
+
+    <div id="footer">
+      <div id="footer-text"></div>
+    </div>
+
+  </div>
+</body>
+</html>
