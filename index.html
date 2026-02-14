@@ -2,101 +2,70 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Feng Xie's home page">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="jemdoc.css?v=20260214" type="text/css">
-<link rel="shortcut icon" href="BTBU_logo.png">
 <title>Feng Xie's Homepage</title>
-</head>
 
-<body>
+<style>
 
-<!-- Fixed Navigation -->
-<div class="topnav">
-  <div class="nav-inner">
+/* ===============================
+   Background
+   =============================== */
+html {
+  background-color: #eeeeee;
+}
 
-    <div class="nav-name">
-      <a href="#home">Feng Xie</a>
-    </div>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #222;
+}
 
-    <div class="nav-links">
-      <a href="#bio">Biography</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#students">Students</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#service">Service</a>
-    </div>
+/* ===============================
+   Fixed Top Navigation
+   =============================== */
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: #f8f9fb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+}
 
-  </div>
-</div>
+.nav-inner {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-<div id="layout-content">
+.nav-name a {
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
 
-<a id="home"></a>
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
 
-<table>
-<tr>
-<td width="650">
-<div id="toptitle">
-<h1>Feng Xie</h1>
-</div>
+.nav-links a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #444;
+  transition: 0.2s;
+}
 
-<p>
-Associate Professor<br><br>
-<a href="https://stxy.btbu.edu.cn/" target="_blank">Department of Applied Statistics</a> & 
-<a href="https://btbu-causality.group/" target="_blank">Causal Inference Group</a><br>
-Beijing Technology and Business University<br>
-Beijing, China. 102488.<br><br>
-Email: fengxie@btbu.edu.cn
-</p>
-</td>
+.nav-links a:hover {
+  color: #527bbd;
+}
 
-<td>
-<img src="photos/bio_2025.jpg" width="300">
-</td>
-</tr>
-</table>
-
-<h2 id="bio">Biography</h2>
-<p>
-I am currently an associate professor in the Department of Applied Statistics at Beijing Technology and Business University.
-Before joining BTBU, I did postdoctoral research at Peking University.
-I obtained my PhD from Guangdong University of Technology.
-</p>
-
-<h2 id="research">Research Interests</h2>
-<ul>
-<li>Causal Discovery</li>
-<li>Instrumental Variable Models</li>
-<li>Latent Variable Models</li>
-</ul>
-
-<h2 id="publications">Publications</h2>
-<p>
-(Keep your full publication list here — unchanged from your original file.)
-</p>
-
-<h2 id="students">Students</h2>
-<p>
-(Your student list here.)
-</p>
-
-<h2 id="teaching">Teaching</h2>
-<p>
-Data Analysis Based on Python<br>
-Statistical Computing<br>
-Machine Learning
-</p>
-
-<h2 id="service">Academic Service</h2>
-<p>
-Area Chair: NeurIPS 2024, 2025; ICML 2025.
-</p>
-
-<div id="footer"></div>
-
-</div>
-</body>
-</html>
+/* ===================*
