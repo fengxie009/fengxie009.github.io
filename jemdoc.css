@@ -426,4 +426,11 @@ body {
   background-color: #ffffff;
   box-sizing: border-box;
 }
+/* reserve space for the fixed top nav */
+body { 
+  padding-top: 80px !important; 
+}
+html {
+  scroll-padding-top: 80px;
+}
 
