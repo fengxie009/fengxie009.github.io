@@ -368,6 +368,55 @@ img {
     border: none;
 }
 
+
+<style>
+  /* 固定顶部导航栏 */
+  .topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: 56px;
+    background: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+  }
+
+  .topnav .nav-inner {
+    width: 100%;
+    max-width: 1000px; /* 你可以按页面宽度调 */
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+  }
+
+  .topnav a {
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 8px 6px;
+  }
+
+  .topnav a:hover {
+    text-decoration: underline;
+  }
+
+  /* 给正文内容留出顶部空间，避免被导航栏挡住 */
+  #layout-content {
+    margin-top: 80px !important; /* 原来你是 25px，这里覆盖掉 */
+  }
+
+  /* 点击锚点时，避免标题被固定导航栏遮住 */
+  html {
+    scroll-padding-top: 80px;
+  }
+</style>
+
 table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
