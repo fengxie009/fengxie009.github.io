@@ -415,3 +415,74 @@ body {
 html {
   scroll-padding-top: 80px;
 }
+
+/* ===== Top fixed nav (Feng Xie left, menu right) ===== */
+.topnav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:56px;               /* 可调：50~60都行 */
+  background:#003366;
+  z-index:9999;
+}
+
+.nav-inner{
+  max-width:960px;           /* 和你正文宽度一致即可 */
+  margin:0 auto;
+  height:56px;
+  padding:0 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.nav-left{display:flex; align-items:center;}
+.nav-right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:14px;                  /* 菜单之间间距 */
+  flex-wrap:wrap;
+  text-align:right;
+}
+
+/* Name style */
+.topnav .nav-name{
+  color:#fff !important;
+  font-weight:700;
+  font-size:20px;            /* 大一点 */
+  letter-spacing:.2px;
+  text-decoration:none;
+}
+
+/* Right menu links */
+.topnav a{
+  color:#fff !important;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.topnav a:hover{
+  text-decoration:underline;
+}
+
+/* Prevent content being hidden under fixed nav */
+#layout-content{
+  padding-top:70px;          /* >= topnav高度 + 一点余量 */
+}
+
+/* Anchor offset so headings aren't hidden */
+h2[id]{
+  scroll-margin-top:70px;    /* 现代浏览器支持，点击跳转更舒服 */
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  .topnav{height:auto;}
+  .nav-inner{height:auto; padding:10px 12px; align-items:flex-start;}
+  .nav-right{gap:10px;}
+  .topnav .nav-name{font-size:18px;}
+  #layout-content{padding-top:90px;}
+}
+
