@@ -500,7 +500,7 @@ h2[id]{
 
 .gbt-list{
   list-style: none;        /* 取消默认符号 */
-  padding-left: 30px;      /* 整体右移（控制列表距离左侧） */
+  padding-left: 20px;      /* 整体右移（控制列表距离左侧） */
   margin-left: 0;
 }
 
