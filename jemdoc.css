@@ -496,17 +496,17 @@ h2[id]{
   list-style-position: outside;
 }
 
-/* ===== Publications 简洁风格 ===== */
+/* ===== Publications 最终简洁版 ===== */
 
 .gbt-list{
-  list-style: none;     /* 取消编号 */
-  padding-left: 0;
+  list-style: none;        /* 无编号 */
+  padding-left: 30px;      /* 整体向右缩进 */
   margin-left: 0;
 }
 
 .gbt-list > li{
   margin: 14px 0;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .gbt-list a{
@@ -524,4 +524,10 @@ h2[id]{
   font-style:italic;
 }
 
+/* 手机端微调 */
+@media (max-width: 600px){
+  .gbt-list{
+    padding-left: 18px;
+  }
+}
 
