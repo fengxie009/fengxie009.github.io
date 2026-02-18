@@ -549,3 +549,59 @@ h2[id]{
   font-weight:700;
   font-style:italic;
 }
+
+/* ===== Students: 统一点样式 + 可选单列/双列 ===== */
+
+/* 学生列表基础：统一缩进 + 自定义小圆点 */
+.stu-list{
+  list-style: none;
+  padding-left: 30px;   /* 控制整个列表缩进 */
+  margin-left: 0;
+  margin-top: 0.2em;
+  margin-bottom: 0.8em;
+}
+
+.stu-list > li{
+  line-height: 1.4;
+  margin: 6px 0;
+}
+
+/* 学生列表的小点（更低调一些可以换成 #555） */
+.stu-list > li::before{
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #003366;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* 单列（默认就是单列，其实不写也行） */
+.stu-list--one{
+  display: block;
+}
+
+/* 双列：用 grid，但保持点与缩进一致 */
+.stu-list--two{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 6px;
+}
+
+/* grid 下每个 li 仍然是正常块 */
+.stu-list--two > li{
+  margin: 0; /* row-gap 控制间距，所以这里清掉 */
+}
+
+/* 手机端：双列自动变单列，避免拥挤 */
+@media (max-width: 600px){
+  .stu-list{
+    padding-left: 22px;
+  }
+  .stu-list--two{
+    grid-template-columns: 1fr;
+  }
+}
