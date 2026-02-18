@@ -496,62 +496,56 @@ h2[id]{
   list-style-position: outside;
 }
 
-/* ===== Publications：无编号 + 精致点标记 ===== */
+/* ===== Publications：无编号 + 稳定点标记（推荐） ===== */
 
 .gbt-list{
-  list-style: none;        /* 取消默认编号/符号 */
-  padding-left: 34px;      /* 整体向右缩进距离（可以调整） */
+  list-style: none;        /* 取消默认符号 */
+  padding-left: 34px;      /* 整体右移（控制列表距离左侧） */
   margin-left: 0;
 }
 
 .gbt-list > li{
-  position: relative;
   margin: 14px 0;
   line-height: 1.5;
-  padding-left: 14px;      /* 项目内容相对点的内边距 */
+  /* 去掉 position:absolute 的依赖，使用内联块点 */
 }
 
-/* 小圆点（自定义） */
+/* 点用 inline-block，可靠显示且不受父定位影响 */
 .gbt-list > li::before{
   content: "";
-  position: absolute;
-  left: 0;                 /* 点距左侧（由 gbt-list 的 padding-left 决定整体位置） */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;              /* 点直径（可调） */
+  display: inline-block;
+  width: 8px;              /* 点大小 */
   height: 8px;
-  background: #003366;     /* 深蓝色点（与顶部导航一致） */
+  background: #003366;     /* 点颜色（可改） */
   border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(0,0,0,0.06);
+  margin-right: 12px;      /* 点与文本间距 */
+  vertical-align: middle;  /* 让点垂直居中于文本行 */
 }
 
-/* 使链接样式更雅致 */
-.gbt-list a{
-  margin-left:6px;
-  font-size:0.95em;
-  text-decoration: none;
-}
-.gbt-list a:hover{
-  text-decoration: underline;
-}
-
-/* 刊物/会议名加粗斜体 */
-.venue{
-  font-weight:700;
-  font-style:italic;
-}
-
-/* 手机端微调：缩小缩进与点尺寸 */
+/* 小屏幕微调 */
 @media (max-width: 600px){
   .gbt-list{
     padding-left: 22px;
   }
   .gbt-list > li{
-    padding-left: 12px;
     margin: 10px 0;
   }
   .gbt-list > li::before{
     width: 6px;
     height: 6px;
+    margin-right: 10px;
   }
+}
+
+/* 链接和刊物样式（保持你之前的风格） */
+.gbt-list a{
+  margin-left: 6px;
+  font-size: 0.95em;
+  text-decoration: none;
+}
+.gbt-list a:hover{ text-decoration: underline; }
+
+.venue{
+  font-weight:700;
+  font-style:italic;
 }
