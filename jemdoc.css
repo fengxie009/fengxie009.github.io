@@ -496,18 +496,21 @@ h2[id]{
   list-style-position: outside;
 }
 
-/* ===== Publications (GB/T style) ===== */
-.gbt-list{ margin-left:0; padding-left:0; }
+/* ===== Publications 简洁风格 ===== */
+
+.gbt-list{
+  list-style: none;     /* 取消编号 */
+  padding-left: 0;
+  margin-left: 0;
+}
 
 .gbt-list > li{
-  margin: 12px 0;
-  padding-left: 0;
-  list-style: decimal;
-  line-height: 1.35;
+  margin: 14px 0;
+  line-height: 1.45;
 }
 
 .gbt-list a{
-  margin-left:8px;
+  margin-left:6px;
   font-size:0.95em;
   text-decoration: none;
 }
@@ -519,20 +522,6 @@ h2[id]{
 .venue{
   font-weight:700;
   font-style:italic;
-}
-
-/* 悬挂缩进 */
-.gbt-list > li{
-  text-indent: -1.2em;
-  padding-left: 1.6em;
-}
-
-/* 手机端优化 */
-@media (max-width: 600px){
-  .gbt-list > li{
-    padding-left: 0.8em;
-    text-indent: -0.8em;
-  }
 }
 
 
