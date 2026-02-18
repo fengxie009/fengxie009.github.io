@@ -514,11 +514,11 @@ h2[id]{
 .gbt-list > li::before{
   content: "";
   display: inline-block;
-  width: 8px;              /* 点大小 */
-  height: 8px;
+  width: 5px;              /* 点大小 */
+  height: 5px;
   background: #003366;     /* 点颜色（可改） */
   border-radius: 50%;
-  margin-right: 12px;      /* 点与文本间距 */
+  margin-right: 10px;      /* 点与文本间距 */
   vertical-align: middle;  /* 让点垂直居中于文本行 */
 }
 
