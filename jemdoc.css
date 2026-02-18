@@ -485,4 +485,14 @@ h2[id]{
   .topnav .nav-name{font-size:18px;}
   #layout-content{padding-top:90px;}
 }
+.student-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* 两列 */
+  gap: 6px 40px;                    /* 行间距 列间距 */
+  padding-left: 20px;               /* 保持缩进 */
+}
+
+.student-list li{
+  list-style-position: outside;
+}
 
