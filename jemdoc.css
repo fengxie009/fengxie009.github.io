@@ -1,613 +1,587 @@
-/* Default css file for jemdoc. */
-
-table#tlayout {
-    border: none;
-    border-collapse: separate;
-    background: white;
-}
-/*
-body {
-    background: white;
-    padding-bottom: 8px;
-    margin: 0;
-}
-*/
-html {
-  background-color: #eeeeee;
-}
-
-body {
-  font-family: Georgia, serif;
-  color: #000;
-  background-color: #ffffff;
-  text-align:left; /* for IE */
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left:  50px;
-  padding-right: 50px;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  max-width: 960px;
-}
-
-#layout-menu {
-    background: #f6f6f6;
-    border: 1px solid #dddddd;
-    padding-top: 0.5em;
-    padding-left: 8px;
-    padding-right: 8px;
-    font-size: 1.0em;
-    width: auto;
-    white-space: nowrap;
-    text-align: left;
-    vertical-align: top;
-}
-
-#layout-menu td {
-    background: #f4f4f4;
-    vertical-align: top;
-}
-
-#layout-content {
-    padding-top: 0.0em;
-    padding-left: 1.0em;
-    padding-right: 1.0em;
-    border: none;
-    background: white;
-    text-align: left;
-    vertical-align: top;
-}
-
-#layout-menu a {
-    line-height: 1.5em;
-    margin-left: 0.5em;
-}
-
-tt {
-    background: #ffffdd;
-}
-
-pre, tt {
-    font-size: 90%;
-    font-family: monaco, monospace;
-}
-
-a, a > tt {
-    color: #224b8d;
-    text-decoration: none;
-}
-
-a:hover {
-    border-bottom: 1px gray dotted;
-}
-
-#layout-menu a.current:link, #layout-menu a.current:visited {
-    color: #022b6d;
-    border-bottom: 1px gray solid;
-}
-#layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
-    color: #527bbd;
-    text-decoration: none;
-}
-#layout-menu a:hover {
-    text-decoration: none;
-}
-
-div.menu-category {
-    border-bottom: 1px solid gray;
-    margin-top: 0.8em;
-    padding-top: 0.2em;
-    padding-bottom: 0.1em;
-    font-weight: bold;
-}
-
-div.menu-item {
-    padding-left: 16px;
-    text-indent: -16px;
-}
-
-div#toptitle {
-    padding-bottom: 0.2em;
-    margin-bottom: 1.5em;
-    /*border-bottom: 3px double gray;*/
-}
-
-/* Reduce space if we begin the page with a title. */
-div#toptitle + h2, div#toptitle + h3 {
-    margin-top: 0em;
-}
-
-div#subtitle {
-    margin-top: 0.0em;
-    margin-bottom: 0.0em;
-    padding-top: 0em;
-    padding-bottom: 0.1em;
-}
-
-em {
-    font-style: italic;
-}
-
-strong {
-    font-weight: bold;
-}
-
-
-h1, h2, h3 {
-    color: #527bbd;
-    margin-top: 0.7em;
-    margin-bottom: 0.5em;
-    padding-bottom: 0.2em;
-    line-height: 1.0;
-    padding-top: 0.5em;
-    border-bottom: 1px solid #aaaaaa;
-}
-
-h1 {
-    font-size: 165%;
-    padding-bottom: 0.3em;
-}
-
-h2 {
-    padding-top: 0.8em;
-    font-size: 125%;
-}
-
-h2 + h3 {
-    padding-top: 0.2em;
-}
-
-h3 {
-    font-size: 110%;
-    border-bottom: none;
-}
-
-p {
-    margin-top: 0.0em;
-    margin-bottom: 0.8em;
-    padding: 0;
-    line-height: 1.3;
-}
-
-pre {
-    padding: 0;
-    margin: 0;
-}
-
-div#footer {
-    font-size: small;
-    border-top: 1px solid #c0c0c0;
-    padding-top: 0.1em;
-    margin-top: 4.0em;
-    color: #c0c0c0;
-}
-
-div#footer a {
-    color: #80a0b0;
-}
-
-div#footer-text {
-    float: left;
-    padding-bottom: 8px;
-}
-
-ul, ol, dl {
-    margin-top: 0.2em;
-    padding-top: 0;
-    margin-bottom: 0.8em;
-}
-
-dt {
-    margin-top: 0.5em;
-    margin-bottom: 0;
-}
-
-dl {
-    margin-left: 20px;
-}
-
-dd {
-    color: #222222;
-}
-
-dd > *:first-child {
-    margin-top: 0;
-}
-
-ul {
-    list-style-position: outside;
-    list-style-type: square;
-}
-
-p + ul, p + ol {
-    margin-top: -0.5em;
-}
-
-li {
-    margin-top:0.9em;
-}
-
-ol {
-    list-style-position: outside;
-    list-style-type: decimal;
-}
-
-li p, dd p {
-    margin-bottom: 0.3em;
-}
-
-
-ol ol {
-    list-style-type: lower-alpha;
-}
-
-ol ol ol {
-    list-style-type: lower-roman;
-}
-
-p + div.codeblock {
-    margin-top: -0.6em;
-}
-
-div.codeblock, div.infoblock {
-    margin-right: 0%;
-    margin-top: 1.2em;
-    margin-bottom: 1.3em;
-}
-
-div.blocktitle {
-    font-weight: bold;
-    color: #cd7b62;
-    margin-top: 1.2em;
-    margin-bottom: 0.1em;
-}
-
-div.blockcontent {
-    border: 1px solid silver;
-    padding: 0.3em 0.5em;
-}
-
-div.infoblock > div.blockcontent {
-    background: #ffffee;
-}
-
-div.blockcontent p + ul, div.blockcontent p + ol {
-    margin-top: 0.4em;
-}
-
-div.infoblock p {
-    margin-bottom: 0em;
-}
-
-div.infoblock li p, div.infoblock dd p {
-    margin-bottom: 0.5em;
-}
-
-div.infoblock p + p {
-    margin-top: 0.8em;
-}
-
-div.codeblock > div.blockcontent {
-    background: #f6f6f6;
-}
-
-span.pycommand {
-    color: #000070;
-}
-
-span.statement {
-    color: #008800;
-}
-span.builtin {
-    color: #000088;
-}
-span.special {
-    color: #990000;
-}
-span.operator {
-    color: #880000;
-}
-span.error {
-    color: #aa0000;
-}
-span.comment, span.comment > *, span.string, span.string > * {
-    color: #606060;
-}
-
-@media print {
-    #layout-menu { display: none; }
-}
-
-#fwtitle {
-    margin: 2px;
-}
-
-#fwtitle #toptitle {
-    padding-left: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-#layout-content h1:first-child, #layout-content h2:first-child, #layout-content h3:first-child {
-    margin-top: -0.7em;
-}
-
-div#toptitle h1, #layout-content div#toptitle h1 {
-    margin-bottom: 0.0em;
-    padding-bottom: 0.1em;
-    padding-top: 0;
-    margin-top: 0.5em;
-    border-bottom: none;
-}
-
-img.eq {
-    padding: 0;
-    padding-left: 0.1em;
-    padding-right: 0.1em;
-    margin: 0;
-}
-
-img.eqwl {
-    padding-left: 2em;
-    padding-top: 0.6em;
-    padding-bottom: 0.2em;
-    margin: 0;
-}
-
-table + table {
-    margin-top: 1em;
-}
-
-tr.heading {
-    font-weight: bold;
-    border-bottom: 2px solid black;
-}
-
-img {
-    border: none;
-}
-
-
-/* ===== Fixed top navigation bar ===== */
-.topnav {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-  height: 56px;
-  background: #ffffff;
-  border-bottom: 1px solid #e6e6e6;
-  display: flex;
-  align-items: center;
-}
-
-/* keep nav content aligned with your centered body */
-.topnav .nav-inner {
-  max-width: 960px;     /* 你的 body 是 max-width: 960px */
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 50px;      /* 你的 body 左右 padding 是 50px */
-  display: flex;
-  gap: 18px;
-  align-items: center;
+/* Modern academic homepage styles. */
+
+:root {
+  --ink: #1f2937;
+  --muted: #5b6675;
+  --soft: #edf3f8;
+  --paper: #ffffff;
+  --line: #dbe4ee;
+  --line-strong: #c7d5e5;
+  --navy: #163b63;
+  --navy-dark: #0d253f;
+  --blue: #2563a6;
+  --blue-soft: #eaf3ff;
+  --green-soft: #edf7f1;
+  --green: #246b45;
+  --red: #b42318;
+  --red-soft: #fff1ef;
+}
+
+* {
   box-sizing: border-box;
 }
 
-.topnav a {
-  color: #1a1a1a;
-  text-decoration: none;
-  padding: 8px 6px;
+html {
+  background: var(--soft);
+  scroll-padding-top: 82px;
 }
 
-.topnav a:hover {
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--soft);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+#layout-content {
+  max-width: 1080px;
+  margin: 0 auto 48px;
+  padding: 42px 34px 56px;
+  background: var(--paper);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  box-shadow: 0 24px 70px rgba(13, 37, 63, 0.08);
+}
+
+.has-topnav #layout-content {
+  padding-top: 96px;
+}
+
+a,
+a > tt {
+  color: var(--blue);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+a:hover {
   text-decoration: underline;
 }
 
-/* IMPORTANT: body is centered and has margin-top already.
-   We add padding-top to create space for fixed nav without breaking centering. */
-body {
-  padding-top: 70px;   /* 原来是 10px，这里把内容整体往下顶 */
+img {
+  border: none;
+  max-width: 100%;
 }
 
-/* avoid anchors being hidden behind the fixed bar */
-html {
-  scroll-padding-top: 80px;
+p {
+  margin: 0 0 1rem;
 }
 
-/* ===== Top fixed nav (Feng Xie left, menu right) ===== */
-.topnav{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:56px;               /* 可调：50~60都行 */
-  background:#003366;
-  z-index:9999;
+ul,
+ol,
+dl {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
 }
 
-.nav-inner{
-  max-width:960px;           /* 和你正文宽度一致即可 */
-  margin:0 auto;
-  height:56px;
-  padding:0 14px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+li {
+  margin-top: 0.55rem;
 }
 
-.nav-left{display:flex; align-items:center;}
-.nav-right{
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  gap:14px;                  /* 菜单之间间距 */
-  flex-wrap:wrap;
-  text-align:right;
+strong,
+b {
+  font-weight: 700;
 }
 
-/* Name style */
-.topnav .nav-name{
-  color:#fff !important;
-  font-weight:700;
-  font-size:20px;            /* 大一点 */
-  letter-spacing:.2px;
-  text-decoration:none;
+h1,
+h2,
+h3 {
+  color: var(--navy-dark);
+  font-weight: 750;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: 0;
 }
 
-/* Right menu links */
-.topnav a{
-  color:#fff !important;
-  text-decoration:none;
-  font-size:14px;
+h1 {
+  font-size: 42px;
 }
 
-.topnav a:hover{
-  text-decoration:underline;
+h2 {
+  margin-top: 2.2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 24px;
 }
 
-/* Prevent content being hidden under fixed nav */
-#layout-content{
-  padding-top:70px;          /* >= topnav高度 + 一点余量 */
+h3 {
+  margin-top: 1.35rem;
+  font-size: 18px;
 }
 
-/* Anchor offset so headings aren't hidden */
-h2[id]{
-  scroll-margin-top:70px;    /* 现代浏览器支持，点击跳转更舒服 */
+h2[id] {
+  scroll-margin-top: 86px;
 }
 
-/* Mobile */
-@media (max-width: 600px){
-  .topnav{height:auto;}
-  .nav-inner{height:auto; padding:10px 12px; align-items:flex-start;}
-  .nav-right{gap:10px;}
-  .topnav .nav-name{font-size:18px;}
-  #layout-content{padding-top:90px;}
+/* Fixed top navigation */
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
 }
-.student-list{
+
+.nav-inner {
+  max-width: 1080px;
+  min-height: 64px;
+  margin: 0 auto;
+  padding: 0 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  min-width: max-content;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  text-align: right;
+}
+
+.topnav .nav-name {
+  color: var(--navy-dark);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.topnav a {
+  color: var(--navy-dark);
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Profile hero */
+.profile-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* 两列 */
-  gap: 6px 40px;                    /* 行间距 列间距 */
-  padding-left: 20px;               /* 保持缩进 */
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 44px;
+  align-items: center;
+  padding: 22px 0 38px;
+  border-bottom: 1px solid var(--line);
 }
 
-.student-list li{
-  list-style-position: outside;
+#toptitle {
+  margin-bottom: 0.7rem;
 }
 
-/* ===== Publications：无编号 + 稳定点标记（推荐） ===== */
-
-.gbt-list{
-  list-style: none;        /* 取消默认符号 */
-  padding-left: 20px;      /* 整体右移（控制列表距离左侧） */
-  margin-left: 0;
+#toptitle h1 {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
 }
 
-.gbt-list > li{
-  margin: 14px 0;
-  line-height: 1.5;
-  /* 去掉 position:absolute 的依赖，使用内联块点 */
+.profile-name-mark {
+  width: auto;
+  height: 40px;
+  margin-bottom: 4px;
 }
 
-/* 点用 inline-block，可靠显示且不受父定位影响 */
-.gbt-list > li::before{
-  content: "";
-  display: inline-block;
-  width: 5px;              /* 点大小 */
-  height: 5px;
-  background: #003366;     /* 点颜色（可改） */
-  border-radius: 50%;
-  margin-right: 10px;      /* 点与文本间距 */
-  vertical-align: middle;  /* 让点垂直居中于文本行 */
+.profile-role {
+  color: var(--navy);
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
 }
 
-/* 小屏幕微调 */
-@media (max-width: 600px){
-  .gbt-list{
-    padding-left: 22px;
-  }
-  .gbt-list > li{
-    margin: 10px 0;
-  }
-  .gbt-list > li::before{
-    width: 6px;
-    height: 6px;
-    margin-right: 10px;
-  }
+.profile-affiliation,
+.profile-contact {
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 720px;
 }
 
-/* 链接和刊物样式（保持你之前的风格） */
-.gbt-list a{
-  margin-left: 6px;
-  font-size: 0.95em;
+.profile-contact {
+  margin-top: 1.05rem;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+.profile-links a,
+.scholar-link {
+  color: var(--navy);
+  font-weight: 700;
+  border-bottom: 2px solid var(--line-strong);
+}
+
+.profile-links a:hover,
+.scholar-link:hover {
+  border-bottom-color: var(--blue);
   text-decoration: none;
 }
-.gbt-list a:hover{ text-decoration: underline; }
 
-.venue{
-  font-weight:700;
-  font-style:italic;
+.profile-photo {
+  margin: 0;
 }
 
-/* ===== Students: 统一点样式 + 可选单列/双列 ===== */
-
-/* 学生列表基础：统一缩进 + 自定义小圆点 */
-.stu-list{
-  list-style: none;
-  padding-left: 30px;   /* 控制整个列表缩进 */
-  margin-left: 0;
-  margin-top: 0.2em;
-  margin-bottom: 0.8em;
-}
-
-.stu-list > li{
-  line-height: 1.4;
-  margin: 6px 0;
-}
-
-/* 学生列表的小点（更低调一些可以换成 #555） */
-.stu-list > li::before{
-  content: "";
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  background: #003366;
-  border-radius: 50%;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-/* 单列（默认就是单列，其实不写也行） */
-.stu-list--one{
+.profile-photo img {
   display: block;
+  width: 280px;
+  aspect-ratio: 6 / 7;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
 }
 
-/* 双列：用 grid，但保持点与缩进一致 */
-.stu-list--two{
+/* General lists and sections */
+.gbt-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.gbt-list > li {
+  position: relative;
+  padding-left: 18px;
+  line-height: 1.62;
+}
+
+.gbt-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--navy);
+}
+
+.student-callout {
+  margin: 1.6rem 0 1.2rem;
+  padding: 13px 16px;
+  color: var(--red);
+  background: var(--red-soft);
+  border-left: 4px solid var(--red);
+  border-radius: 0 8px 8px 0;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+/* Research focus modules */
+.research-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
-  row-gap: 6px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 1rem;
 }
 
-/* grid 下每个 li 仍然是正常块 */
-.stu-list--two > li{
-  margin: 0; /* row-gap 控制间距，所以这里清掉 */
+.research-card {
+  min-height: 172px;
+  padding: 17px 17px 16px;
+  background: #fbfdff;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--blue);
+  border-radius: 8px;
 }
 
-/* 手机端：双列自动变单列，避免拥挤 */
-@media (max-width: 600px){
-  .stu-list{
-    padding-left: 22px;
+.research-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.research-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Publication scanning layout */
+.publications-section {
+  margin-top: 0.4rem;
+}
+
+.publications-section h2 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.scholar-link {
+  min-width: max-content;
+  font-size: 15px;
+}
+
+.pub-section-label {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.pub-year {
+  margin-top: 1.55rem;
+  margin-bottom: 0.55rem;
+  color: var(--navy);
+  font-size: 20px;
+}
+
+.publications-section .gbt-list {
+  margin: 0 0 1.4rem;
+  padding-left: 0;
+}
+
+.publications-section .gbt-list > li {
+  margin: 0.68rem 0;
+  padding: 12px 14px 12px 17px;
+  background: #fbfdff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 8px;
+  line-height: 1.58;
+}
+
+.publications-section .gbt-list > li::before {
+  content: none;
+}
+
+.publications-section .gbt-list > li:hover {
+  border-color: var(--line-strong);
+  background: #ffffff;
+}
+
+.venue {
+  display: inline-block;
+  margin: 0 2px;
+  padding: 1px 7px;
+  color: var(--green);
+  background: var(--green-soft);
+  border: 1px solid #d4eadc;
+  border-radius: 4px;
+  font-size: 0.92em;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.publications-section a:not(.scholar-link) {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 0 6px;
+  color: var(--blue);
+  background: #ffffff;
+  border: 1px solid #cfe0f1;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.publications-section a:not(.scholar-link):hover {
+  background: var(--blue-soft);
+  text-decoration: none;
+}
+
+.award {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 7px;
+  color: var(--red);
+  background: var(--red-soft);
+  border: 1px solid #ffd0cb;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+/* Students */
+.student-heading {
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.stu-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.stu-list > li {
+  position: relative;
+  margin: 0.38rem 0;
+  padding-left: 17px;
+  line-height: 1.5;
+}
+
+.stu-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--navy);
+}
+
+.stu-list--two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 36px;
+  row-gap: 4px;
+}
+
+.student-divider {
+  width: 60%;
+  margin: 1rem 0 1.1rem;
+  border: 0;
+  border-top: 1px dashed var(--line-strong);
+}
+
+div#footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+tt,
+pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 90%;
+}
+
+tt {
+  background: #fff8d8;
+}
+
+@media (max-width: 780px) {
+  #layout-content {
+    margin-bottom: 0;
+    padding: 42px 22px 44px;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
   }
-  .stu-list--two{
+
+  .has-topnav #layout-content {
+    padding-top: 92px;
+  }
+
+  .nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0;
+    padding: 14px 22px;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 13px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    white-space: nowrap;
+  }
+
+  .profile-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 12px;
+  }
+
+  .profile-photo {
+    order: -1;
+  }
+
+  .profile-photo img {
+    width: 220px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .publications-section h2 {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-card {
+    min-height: 0;
+  }
+
+  .stu-list--two {
     grid-template-columns: 1fr;
   }
 }
 
-.year-separator {
-  width: 60%;
-  margin: 25px auto;
-  border-top: 2px dashed #666;
+@media (max-width: 520px) {
+  body {
+    font-size: 15px;
+  }
+
+  #layout-content {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  #toptitle h1 {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .profile-name-mark {
+    height: 34px;
+  }
+
+  .profile-photo img {
+    width: 190px;
+  }
+
+  .student-callout {
+    font-size: 16px;
+  }
+}
+
+@media print {
+  .topnav {
+    display: none;
+  }
+
+  #layout-content {
+    padding-top: 0;
+  }
 }
