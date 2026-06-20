@@ -2,79 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Feng Xie's home page">
   <link rel="stylesheet" href="jemdoc.css" type="text/css">
   <link rel="shortcut icon" href="BTBU_logo.png">
   <title>Feng Xie's Homepage</title>
-
-  <style>
-    /* ===== Top fixed nav (Feng Xie left, menu right) ===== */
-    .topnav{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:56px;
-      background:#003366;
-      z-index:9999;
-    }
-    .nav-inner{
-      max-width:960px;
-      margin:0 auto;
-      height:56px;
-      padding:0 14px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      box-sizing:border-box;
-    }
-    .nav-left{display:flex; align-items:center;}
-    .nav-right{
-      display:flex;
-      align-items:center;
-      justify-content:flex-end;
-      gap:14px;
-      flex-wrap:wrap;
-      text-align:right;
-    }
-    .topnav .nav-name{
-      color:#fff !important;
-      font-weight:800;
-      font-size:22px;
-      letter-spacing:.2px;
-      text-decoration:none;
-    }
-    .topnav a{
-      color:#fff !important;
-      text-decoration:none;
-      font-size:14px;
-      line-height:1;
-    }
-    .topnav a:hover{ text-decoration:underline; }
-
-    /* Prevent content being hidden under fixed nav */
-    #layout-content{ padding-top:70px; }
-
-    /* Anchor offset so headings aren't hidden */
-    h2[id]{ scroll-margin-top:70px; }
-
-    /* Mobile */
-    @media (max-width: 600px){
-      .topnav{height:auto;}
-      .nav-inner{
-        height:auto;
-        padding:10px 12px;
-        align-items:flex-start;
-        gap:8px;
-      }
-      .nav-right{gap:10px;}
-      .topnav .nav-name{font-size:20px;}
-      #layout-content{padding-top:95px;}
-    }
-  </style>
 </head>
 
-<body>
+<body class="has-topnav">
 
   <!-- Fixed top navigation -->
   <div class="topnav" id="home">
@@ -97,32 +32,30 @@
 
     <!--<a href="/cn">中文版本</a>-->
 
-    <table>
-      <tbody>
-        <tr>
-          <td width="670">
-            <div id="toptitle">
-              <h1>Feng Xie &nbsp; <img src="fengxie_cn.png" height="38px" style="margin-bottom:-10px" alt=''></h1>
-            </div>
-            <p>
-              <FONT size=5 face="Times New Roman">Associate Professor</FONT><br>
-              <br>
-              <a href="https://stxy.btbu.edu.cn/szdw/yytjxsz/fjsyytjx/c91fb67076584b08b0d0cfa4a7b65b8f.htm" target="_blank"> Department of Applied Statistics</a>
-              &amp; <a href="https://btbu-causality.group/" target="_blank">Causal Inference Group</a><br>
-              Beijing Technology and Business University <br>
-              Beijing, China. 102488.<br>
-              <br>
-              &#127970 Office: Room 209, Shutong Building, Higher Education Garden, Liangxiang,
-              <br>
-              &#128231 Email : fengxie@btbu.edu.cn
-            </p>
-          </td>
-          <td>
-            <img src="photos/bio_2025.jpg" border="0" width="300" height="350" alt="">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <section class="profile-hero">
+      <div class="profile-copy">
+        <div id="toptitle">
+          <h1>Feng Xie <img class="profile-name-mark" src="fengxie_cn.png" alt="Feng Xie in Chinese"></h1>
+        </div>
+        <p class="profile-role">Associate Professor</p>
+        <p class="profile-affiliation">
+          <a href="https://stxy.btbu.edu.cn/szdw/yytjxsz/fjsyytjx/c91fb67076584b08b0d0cfa4a7b65b8f.htm" target="_blank">Department of Applied Statistics</a>
+          &amp; <a href="https://btbu-causality.group/" target="_blank">Causal Inference Group</a><br>
+          Beijing Technology and Business University, Beijing, China. 102488.
+        </p>
+        <p class="profile-contact">
+          Office: Room 209, Shutong Building, Higher Education Garden, Liangxiang<br>
+          Email: <a href="mailto:fengxie@btbu.edu.cn">fengxie@btbu.edu.cn</a>
+        </p>
+        <p class="profile-links">
+          <a href="https://scholar.google.com/citations?user=stLFCtQAAAAJ" target="_blank">Google Scholar</a>
+          <a href="https://btbu-causality.group/" target="_blank">Research Group</a>
+        </p>
+      </div>
+      <figure class="profile-photo">
+        <img src="photos/bio_2025.jpg" alt="Portrait of Feng Xie">
+      </figure>
+    </section>
 
     <h2 id="bio">Biography</h2>
     <p>
@@ -137,25 +70,35 @@
       From 2019 - 2020, I was a visiting Ph.D. student in the Department of Philosophy, Carnegie Mellon University.
     </p>
 
-    <h2 id="research">Research Interests:</h2>
-     <ul class="gbt-list">
-      <li><b>Causal Structure Learning:</b> Global and local structure learning under latent confounding; causal discovery from multi-source and interventional data.</li>
-      <li><b>Causal Effect Estimation:</b> Testability of valid adjustment sets, instrumental variables, and proxy variables from observational data.</li>
-      <li><b>Causal Attribution:</b> Causal structure-based root cause analysis.</li>
-    </ul>
+    <h2 id="research">Research Interests</h2>
+    <div class="research-grid">
+      <section class="research-card">
+        <h3>Causal Structure Learning</h3>
+        <p>Global and local causal structure learning under latent confounding, with emphasis on multi-source, interventional, and partially observed data.</p>
+      </section>
+      <section class="research-card">
+        <h3>Causal Effect Estimation</h3>
+        <p>Testable identification and estimation of causal effects using valid adjustment sets, instrumental variables, and proxy variables from observational data.</p>
+      </section>
+      <section class="research-card">
+        <h3>Causal Attribution</h3>
+        <p>Causal structure-based attribution and root cause analysis for understanding how causes contribute to observed outcomes.</p>
+      </section>
+    </div>
 
 
 
-    <p style="font-size: 20px; text-align: justify; color: #ff0000; font-weight: bold;">
+    <p class="student-callout">
       计划招收2026级硕士研究生若干名，欢迎对本研究方向感兴趣的同学发送简历至我的邮箱进一步沟通!
     </p>
 
-    <h2 id="publications">Publications (* Equal Contribution,  &#128231 Corresponding author) &nbsp;&nbsp;&nbsp;
-      <a href="https://scholar.google.com/citations?user=stLFCtQAAAAJ" target="_blank"> [Google Scholar Link]</a> <small></small>
+    <section class="publications-section" aria-labelledby="publications">
+    <h2 id="publications">Publications (* Equal Contribution,  &#128231; Corresponding author)
+      <a class="scholar-link" href="https://scholar.google.com/citations?user=stLFCtQAAAAJ" target="_blank">Google Scholar</a>
     </h2>
 
 
-<br><font size="4"><b>Preprints</b></font>
+<h3 class="pub-year">Preprints</h3>
 <ul class="gbt-list">
   <li>
     Yan Zeng, Shenglan Nie, <b>Feng Xie</b> &#128231;, Libo Huang, Peng Wu, and Zhi Geng.
@@ -170,19 +113,18 @@
   </li>
 </ul>
 
-<br><font size="4"><b>Published Papers</b></font>
-  <br>
-  <br><font size="4" color="#003366"><b>2026</b></font>
+<h3 class="pub-section-label">Published Papers</h3>
+  <h3 class="pub-year">2026</h3>
   <ul class="gbt-list">
     <li>
-    Zeyu Liu, Zheng Li, <b>Feng Xie</b> &#128231;, Yan Zeng&#128231, Hao Zhang, and Kun Zhang. 
+    Zeyu Liu, Zheng Li, <b>Feng Xie</b> &#128231;, Yan Zeng &#128231;, Hao Zhang, and Kun Zhang. 
     Local Covariate Selection for Average Causal Effect Estimation without Pretreatment and Causal Sufficiency Assumptions.
-    <span class="venue">ICML</span> , Seoul, South Korea, 2026 <font color="red">(Spotlight, TOP 2.2%)</font>. <a href="https://openreview.net/pdf?id=qZVcGlU5lN" target="_blank">[PDF]</a>
+    <span class="venue">ICML</span> , Seoul, South Korea, 2026 <span class="award">(Spotlight, TOP 2.2%)</span>. <a href="https://openreview.net/pdf?id=qZVcGlU5lN" target="_blank">[PDF]</a>
     </li>
     <li>
     Zheng Li, <b>Feng Xie</b> &#128231;, Shenglan Nie, Xichen Guo, Ruxin Wang &#128231;, Hao Zhang &#128231;. 
     A Recursive Decomposition Framework for Causal Structure Learning in the Presence of Latent Variables. 
-    <span class="venue">ICML</span> , Seoul, South Korea, 2026 <font color="red">(Oral, TOP 0.7%)</font>. <a href="https://openreview.net/pdf?id=jdbQzlnYll" target="_blank">[PDF]</a>
+    <span class="venue">ICML</span> , Seoul, South Korea, 2026 <span class="award">(Oral, TOP 0.7%)</span>. <a href="https://openreview.net/pdf?id=jdbQzlnYll" target="_blank">[PDF]</a>
     </li>
     <li>
     Yixin Ren, Hao Zhang, Yewei Xia, <b>Feng Xie</b>, Jihong Guan, Shuigeng Zhou. 
@@ -190,7 +132,7 @@
     <span class="venue"> ACM Transactions on Knowledge Discovery from Data (TKDD)</span> , 2026, Accepted. <a href="https://dl.acm.org/doi/10.1145/3797881" target="_blank">[PDF]</a>
     </li>
   </ul>
-  <br><font size="4" color="#003366"><b>2025</b></font>
+  <h3 class="pub-year">2025</h3>
   <ul class="gbt-list">
   <li>
     Zheng Li, Xichen Guo, <b>Feng Xie</b> &#128231;, Yan Zeng, Hao Zhang &#128231;, and Zhi Geng.
@@ -208,7 +150,7 @@
   <li>
     Zheng Li, Zeyu Liu, <b>Feng Xie</b> &#128231;, Hao Zhang, Chunchen Liu, and Zhi Geng.
     Local Identifying Causal Relations in the Presence of Latent Variables.
-    <span class="venue">ICML</span>, Vancouver, Canada, 2025 <font color="red">(Spotlight, TOP 2.6%)</font>.
+    <span class="venue">ICML</span>, Vancouver, Canada, 2025 <span class="award">(Spotlight, TOP 2.6%)</span>.
     <a href="https://openreview.net/pdf?id=O6q2BHK1BL" target="_blank">[PDF]</a>
   </li>
 
@@ -222,7 +164,7 @@
   <li>
     Shanshan Luo, Yixuan Yu, Chunchen Liu, <b>Feng Xie</b> &#128231;, and Zhi Geng.
     Causal Attribution Analysis for Continuous Outcomes.
-    <span class="venue">ICML</span>, Vancouver, Canada, 2025 <font color="red">(Spotlight, TOP 2.6%)</font>.
+    <span class="venue">ICML</span>, Vancouver, Canada, 2025 <span class="award">(Spotlight, TOP 2.6%)</span>.
     <a href="https://openreview.net/pdf?id=Lie2rOCgkh" target="_blank">[PDF]</a>
   </li>
 
@@ -241,12 +183,12 @@
   </li>
  </ul>
   
-    <br><font size="4" color="#003366"><b>2024</b></font>
+    <h3 class="pub-year">2024</h3>
   <ul class="gbt-list">
   <li>
     <b>Feng Xie</b>, Zhen Yao, Lin Xie, Yan Zeng, and Zhi Geng.
     Identification and Estimation of the Bi-Directional MR with Some Invalid Instruments.
-    <span class="venue">NeurIPS</span>, Vancouver, Canada, 2024 <font color="red">(Oral, TOP 0.39%)</font>.
+    <span class="venue">NeurIPS</span>, Vancouver, Canada, 2024 <span class="award">(Oral, TOP 0.39%)</span>.
     <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/5681251fa039cf49d6d11b906eded1b3-Paper-Conference.pdf" target="_blank">[PDF]</a>
   </li>
 
@@ -282,7 +224,7 @@
   <li>
     <b>Feng Xie</b>, Zhengming Chen, Shanshan Luo, Wang Miao, Ruichu Cai, and Zhi Geng.
     Automating the Selection of Proxy Variables of Unmeasured Confounders.
-    <span class="venue">ICML</span>, Vienna, Austria, 2024 <font color="red">(Spotlight, TOP 1.98%)</font>.
+    <span class="venue">ICML</span>, Vienna, Austria, 2024 <span class="award">(Spotlight, TOP 1.98%)</span>.
     <a href="https://openreview.net/pdf?id=VuoB86HiCL" target="_blank">[PDF]</a>
     <a href="https://github.com/jinshi201/Proxy_variable" target="_blank">[Python code]</a>
   </li>
@@ -309,7 +251,7 @@
   </li>
   </ul>
     
-  <br><font size="4" color="#003366"><b>2023</b></font>
+  <h3 class="pub-year">2023</h3>
   <ul class="gbt-list">
   <li>
     Lingjing Kong, Biwei Huang, <b>Feng Xie</b>, Eric Xing, Yuejie Chi, and Kun Zhang.
@@ -333,7 +275,7 @@
   </li>
 </ul>
   
-  <br><font size="4" color="#003366"><b>Before 2023</b></font>
+  <h3 class="pub-year">Before 2023</h3>
   <ul class="gbt-list">
     <li>
     Biwei Huang, Charles Low, <b>Feng Xie</b>, Clark Glymour, and Kun Zhang.
@@ -345,7 +287,7 @@
   <li>
     <b>Feng Xie</b>, Biwei Huang, Zhengming Chen, Yangbo He, Zhi Geng, and Kun Zhang.
     Identification of Linear Non-Gaussian Latent Hierarchical Structure.
-    <span class="venue">ICML</span>, Baltimore, MD, USA, 2022 <font color="red">(Spotlight)</font>.
+    <span class="venue">ICML</span>, Baltimore, MD, USA, 2022 <span class="award">(Spotlight)</span>.
     <a href="https://web.archive.org/web/20220709164118id_/https://proceedings.mlr.press/v162/xie22a/xie22a.pdf" target="_blank">[PDF]</a>
   </li>
 
@@ -353,7 +295,7 @@
     Z. Chen*, <b>Feng Xie*</b>, Jie Qiao*, Zhifeng Hao, Kun Zhang, and Ruichu Cai.
     Identification of Linear Latent Variable Model with Arbitrary Distribution.
     <span class="venue">AAAI</span>, 2022.
-    <a href=" https://cdn.aaai.org/ojs/20585/20585-13-24598-1-2-20220628.pdf" target="_blank">[PDF]</a>
+    <a href="https://cdn.aaai.org/ojs/20585/20585-13-24598-1-2-20220628.pdf" target="_blank">[PDF]</a>
   </li>
 
   <li>
@@ -387,7 +329,7 @@
   <li>
     <b>Feng Xie</b>* , Ruichu Cai* , Biwei Huang, Clark Glymour, Zhifeng Hao, and Kun Zhang*.
     Generalized Independent Noise Condition for Estimating Latent Variable Causal Graphs.
-    <span class="venue">NeurIPS</span>, 2020 <font color="red">(Spotlight, TOP 2.96%)</font>.
+    <span class="venue">NeurIPS</span>, 2020 <span class="award">(Spotlight, TOP 2.96%)</span>.
     <a href="https://proceedings.neurips.cc/paper_files/paper/2020/file/aa475604668730af60a0a87cc92604da-Paper.pdf" target="_blank">[PDF]</a>
     <a href="https://github.com/fengxie009/GIN-Condition-for-Estimating-Latent-Variable-Causal-Graphs" target="_blank">[Matlab code]</a>
     <a href="https://github.com/cmu-phil/causal-learn" target="_blank">[Python code]</a>
@@ -431,13 +373,15 @@
 </ul>
 
 
+    </section>
+
     <h2 id="students">Students</h2>
-    <font size="4"><b>Phd</b></font>
+    <h3 class="student-heading">PhD</h3>
     <ul class="stu-list stu-list--one">
       <li>Xichen Guo (2025-; Co-supervision with Zhi Geng)</li>
     </ul>
 
-    <font size="4"><b>Master</b></font>
+    <h3 class="student-heading">Master</h3>
     <!-- 
     2025年
     -->
@@ -448,7 +392,7 @@
       <li>Keli Zhou (2025-; Co-supervision with Yan Zeng)</li>
       <li>Weicong Cheng (2025-)</li>
     </ul>
-   <hr width="60%" style="border-top: 1.5px dashed #bbb; border-bottom: none;">
+   <hr class="student-divider">
     <!-- 
     2024年
     -->
@@ -460,11 +404,11 @@
       <li>Ze Wang (2024-)</li>
     </ul>
 
-    <font size="4"><b>Undergraduate</b></font>
+    <h3 class="student-heading">Undergraduate</h3>
    <ul class="stu-list stu-list--two">
       <li>Yuting Zhang (2024-)</li>
     </ul>
-    <font size="4"><b>Alumni</b></font>
+    <h3 class="student-heading">Alumni</h3>
     <!-- 
     2023年硕士
     -->
@@ -478,9 +422,9 @@
 
     <h2 id="teaching">Teaching</h2>
      <ul class="gbt-list">
-      <li>Machine Learning (Fall 2026, Fall 2025, Fall 2024, Fall 2023)</li>
       <li>Data Analysis Based on Python (Spring 2025)</li>
       <li>Statistical Computing (Fall 2025, Spring 2025, Spring 2024)</li>
+      <li>Machine Learning (Fall 2025, Fall 2024, Fall 2023)</li>
       <li>Applied Stochastic Processes (Fall 2022)</li>
     </ul>
 
